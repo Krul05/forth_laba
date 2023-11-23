@@ -1,4 +1,4 @@
-public class MissBok extends Character implements Outgoing, Laughing{
+public class MissBok extends Character implements Outgoing, Laughing, Close{
     MissBok(Characters name) {
         super(name);
     }
@@ -11,5 +11,10 @@ public class MissBok extends Character implements Outgoing, Laughing{
     @Override
     public void laughing_action() {
         System.out.println("Фрекен Бок смеётся от удовольствия");
+    }
+
+    @Override
+    public String close() {
+        return "фрекен Бок стала закрывать дверь";
     }
 }

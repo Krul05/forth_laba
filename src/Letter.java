@@ -3,8 +3,11 @@ import java.util.Objects;
 class Letter {
     private Characters sender;
     private int priority;
-    Letter (Characters sender, int priority) {
+    Letter (Characters sender) {
         this.sender = sender;
+    }
+    public void set_priority(int priority) throws PriorityException{
+        if (priority<=0) throw new PriorityException(priority);
         this.priority = priority;
     }
     @Override
