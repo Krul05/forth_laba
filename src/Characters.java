@@ -11,6 +11,7 @@ public enum Characters {
         this.name = name;
     }
 
+
     public String getName() {
         return name;
     }

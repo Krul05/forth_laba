@@ -10,8 +10,8 @@ public class Main {
             letter_from_Bosse.set_priority(1);
             letter_from_Betan.set_priority(1);
         }
-        catch (PriorityException ex1) {
-            ex1.printStackTrace();
+        catch (PriorityException ex) {
+            ex.printStackTrace();
         }
 
         carlson.suspect();
@@ -22,6 +22,8 @@ public class Main {
         uncleJulius.outgoing_action();
         msBok.outgoing_action();
         carlson.flying_action();
+        Carlson.Drill drill = new Carlson.Drill();
+        drill.description();
         carlson.drilling();
         if (letter_from_Betan.equals(letter_from_Bosse)) {
             System.out.println(junior + " был очень рад письмам, пришедшим и от Боссе, и от Бетан");
@@ -39,6 +41,14 @@ public class Main {
                 ex.printStackTrace();
             }
         }
+        class Misunderstanding {
+            Characters name = Characters.Junior;
+            public void incomprehension(Carlson carlson) {
+                System.out.println(name.getName() + " не понял зачем " + carlson + " это сделал");
+            }
+        }
+        Misunderstanding misunderstanding = new Misunderstanding();
+        misunderstanding.incomprehension(carlson);
 
     }
 }

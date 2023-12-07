@@ -5,9 +5,13 @@ public class Carlson extends Character implements Drilling, Flying, Suspect {
 
     @Override
     public void flying_action() {
-        System.out.println("Карлсон влетел в комнату");
+        System.out.println("Карлсон влетел в комнату с дрелью в руках");
     }
-
+    public static class Drill {
+        public void description() {
+            System.out.println("Дрель, которую притащил " + name.getName() + ", раньше висела на стене в домике на крыше");
+        }
+    }
     @Override
     public void drilling() {
         System.out.println("Карлсон сверлит стену");
@@ -45,16 +49,16 @@ public class Carlson extends Character implements Drilling, Flying, Suspect {
             public void set_is_run_in(boolean is_run_in) {
                 this.is_run_in = is_run_in;
             }
-            public boolean Is_run_in() {
+            public boolean get_is_run_in() {
                 return this.is_run_in;
             }
-            public Characters who_character() {
+            public Characters get_character() {
                 return this.character;
             }
         }
         Children carlson = new Children(Characters.Carlson);
         carlson.set_is_run_in(true);
-        if (carlson.Is_run_in() && carlson.who_character()==Characters.Carlson) {
+        if (carlson.get_is_run_in() && carlson.get_character()==Characters.Carlson) {
             System.out.println("А если в комнату забегал Карлсон, дядя Юлиус отсылал его, говоря, что дети должны играть в другом месте, а они хотят спокойно, в тишине выпить кофе.");
         }
     }

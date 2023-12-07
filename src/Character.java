@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 abstract class Character {
-    protected Characters name;
+    protected static Characters name;
     Character (Characters name) {
         this.name = name;
     }
